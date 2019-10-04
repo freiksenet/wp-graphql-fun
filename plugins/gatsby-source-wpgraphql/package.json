@@ -1,0 +1,9 @@
+{
+  "name": "gatsby-source-wpgraphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "apollo-link-http": "^1.5.16"
+  }
+}
