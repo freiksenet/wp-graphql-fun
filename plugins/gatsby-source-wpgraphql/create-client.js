@@ -6,10 +6,10 @@ exports.createClient = async ({ createLink }) => {
         link = await createLink(options)
     } else {
         link = createHttpLink({
-        uri: url,
-        fetch,
-        headers,
-        fetchOptions,
+            uri: url,
+            fetch,
+            headers,
+            fetchOptions,
         })
     }
 
