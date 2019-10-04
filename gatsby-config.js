@@ -30,5 +30,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      name: `gatsby-source-wpgraphql`,
+      options: {
+        url: "https://demo.wpgraphql.com/graphql",
+        types: {
+          Post: {
+            // filter: { siteId: "foo"},
+            // query: `posts(filter: { siteId: "foo" })`,
+          },
+          User: {},
+          MediaItem: {},
+        },
+      },
+    },
   ],
 }
