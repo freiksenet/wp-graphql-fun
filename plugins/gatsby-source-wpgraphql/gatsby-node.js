@@ -1,6 +1,8 @@
 const { parse, print, Kind } = require("graphql")
 const { createClient } = require("./create-client")
-const { introspectSchema } = require(`graphql-tools`)
+const { HttpLink } = require("apollo-link-http")
+const { introspectSchema } = require("apollo-server")
+const fetch = require("node-fetch")
 
 const DEFAULT_TYPE_CONFIG = {
   MediaType: {
@@ -18,8 +20,11 @@ exports.onPreBootstrap = (_, options) => {
   CLIENT = createClient({ url: options.url })
 }
 
-exports.createSchemaCustomization = async ({ actions, options }) => {
-  const introspection = await introspectSchema(CLIENT)
+exports.createSchemaCustomization = async ({ actions }, options) => {
+  const link = new HttpLink({ uri: options.url, fetch })
+  const introspection = await introspectSchema(link)
+  console.log(introspection)
+
   const typesToCreate = Object.keys(options.types)
   const types = []
   for (const type of typesToCreate) {

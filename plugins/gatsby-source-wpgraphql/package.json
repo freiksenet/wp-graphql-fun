@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "apollo-link-http": "^1.5.16",
-    "graphql-tools": "^4.0.5"
+    "apollo-server": "^2.9.4"
   },
   "dependencies": {
     "graphql": "^14.5.8"
