@@ -31,7 +31,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      name: `gatsby-source-wpgraphql`,
+      resolve: `gatsby-source-wpgraphql`,
       options: {
         url: "https://demo.wpgraphql.com/graphql",
         types: {
