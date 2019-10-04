@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "apollo-link-http": "^1.5.16"
+    "apollo-link-http": "^1.5.16",
+    "graphql-tools": "^4.0.5"
   }
 }
